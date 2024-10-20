@@ -1,0 +1,70 @@
+/* Text styles */
+.h {
+    font-family: "Copperplate", fantasy;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0; /* Remove negative margins */
+}
+
+.p1 {
+    font-size: xx-large;
+    text-align: center;
+}
+
+
+/* General body styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+/* Confetti container */
+#confetti-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Confetti won't block interactions */
+}
+
+/* Confetti styles - Rectangular shape */
+.confetti {
+    position: absolute;
+    width:10px;
+    height: 10px;
+    background-color: red; /* Confetti color */
+    opacity: 2px;
+    border-radius: 20px;
+    animation: confetti-fall 4s forwards, confetti-scatter 1s ease-out;
+}
+
+/* Falling animation */
+@keyframes confetti-fall {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(400px) rotate(720deg);
+    }
+}
+
+/* Scattering animation */
+@keyframes confetti-scatter {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(calc(100px * var(--random-x)), calc(-200px * var(--random-y)));
+    }
+}

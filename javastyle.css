@@ -1,0 +1,39 @@
+
+/* Set the body background with an animated gradient */
+body {
+    margin: 0;
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(45deg, #ff9a9e, #e97474, #fad0c4, #ff9a9e);
+    background-size: 400% 400%; /* Make the gradient bigger to create smooth movement */
+    animation: shake 20s ease infinite; /* Animate it */
+}
+
+/* Animation definition */
+@keyframes shake {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#quiz-container{
+    font-size: 30px;
+    margin-left: 398px;
+    margin-top:104px;
+}
+#submitBtn{
+    margin-left: 444px;
+    margin-top: 41px;
+    height: 40px;
+    width: 160px;
+    background:rgb(173, 50, 50);
+}
+#result{
+      font-size: x-large;
+      margin-left: 300px;
+}

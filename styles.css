@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden; /* Prevent scrollbars from appearing */
+}
+
+.mainhead {
+    background: linear-gradient(rgb(173, 50, 50), rgb(241, 217, 177));
+    height: 100px;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.quiz {
+    font-size: 2rem; /* Larger font size for visibility */
+    text-align: center; /* Center text */
+}
+
+.button {
+    height: 70px;
+    width: 168px;
+    padding-left: 9px;
+    margin: 20px auto; /* Center the button */
+    display: block; /* Make it block to center */
+    background: rgb(173, 50, 50);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.5rem; /* Responsive font size */
+    border-radius: 10px;
+}
+
+.q1 {
+    margin: 5px auto; /* Center the quote */
+    font-size: 2rem; /* Responsive font size */
+    color: rgb(153, 37, 31);
+    text-align: center; /* Center text */
+}
+
+.button1{
+    height: 80px;
+    width: 168px;
+    padding-left: 9px;
+    margin-top: 65px;
+    margin-left: 550px;
+    background: rgb(173, 50, 50);
+    cursor:pointer;
+    transition: background-color 0.3s ease;
+    font-size: 30px;
+    border-radius: 10px;
+}
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Stars won't interfere with other elements */
+}
+
+.star {
+    position: absolute;
+    width: 5px; /* Width of each star */
+    height: 5px; /* Height of each star */
+    background: linear-gradient(rgb(219, 116, 13), rgb(245, 245, 245)); /* Color of stars */
+    border-radius: 50%; /* Make stars circular */
+    animation: fall linear infinite; /* Set animation for falling */
+}
+
+/* Animation for falling stars */
+@keyframes fall {
+    0% {
+        transform: translateY(-10px); /* Start just above the viewport */
+        opacity: 1; /* Start fully visible */
+    }
+    100% {
+        transform: translateY(95vh); /* Move down to the bottom of the viewport */
+        opacity: 0; /* Fade out */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .quiz {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+
+    .button {
+        width: 80%; /* Full width for mobile */
+        font-size: 1.2rem; /* Adjust font size */
+    }
+
+    .q1 {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+}

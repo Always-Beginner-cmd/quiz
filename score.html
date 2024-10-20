@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Score</title>
+    <link rel="stylesheet" href="scorestyle.css">
+    <script src="score.js" defer></script> <!-- Include score.js -->
+</head>
+<body>
+    <h1 class="h">Quiz Completed!!!</h1>
+    <p style="margin-left:50px; margin-top: 42px; font-size:70px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        Your final score is: <span id="finalScore"></span>
+    </p> <!-- Display score here -->
+    
+    <div class="confetti-trigger text-center mt-5">
+        <img src="https://png.pngtree.com/png-clipart/20230915/original/pngtree-colorfull-birthday-confetti-poppers-vector-png-image_12224628.png" alt="Click for confetti!" 
+             onclick="triggerConfetti()" style="cursor: pointer; width: 100px;">
+    </div>
+    
+    <div id="confetti-container"></div>
+</body>
+</html>
